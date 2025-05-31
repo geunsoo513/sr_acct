@@ -7,6 +7,7 @@ const studentData = [
   { id: '20230001', name: '홍길동', email: 'hong123@school.edu', password: 'abc123' },
   { id: '20230002', name: '김철수', email: 'kimcs@school.edu', password: 'pass456' },
   { id: '20230003', name: '이영희', email: 'lee998@school.edu', password: 'pw7890' }
+  { id: '20230004', name: '김민성', email: 'kimms@school.edu', password: 'pw7890' }
 ];
 
 // 폼 제출 이벤트 처리
