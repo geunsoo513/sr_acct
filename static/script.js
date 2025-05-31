@@ -6,9 +6,24 @@ const resultDiv = document.getElementById('result');
 const studentData = [
   { id: '20230001', name: '홍길동', email: 'hong123@school.edu', password: 'abc123' },
   { id: '20230002', name: '김철수', email: 'kimcs@school.edu', password: 'pass456' },
-  { id: '20230003', name: '이영희', email: 'lee998@school.edu', password: 'pw7890' }
+  { id: '20230003', name: '이영희', email: 'lee998@school.edu', password: 'pw7890' },
   { id: '20230004', name: '김민성', email: 'kimms@school.edu', password: 'pw7890' }
 ];
+
+// URL에서 쿼리 파라미터 읽어서 input에 설정
+window.addEventListener('DOMContentLoaded', () => {
+  const params = new URLSearchParams(window.location.search);
+  const idFromURL = params.get('studentId');
+  const nameFromURL = params.get('studentName');
+
+  if (idFromURL) document.getElementById('studentId').value = idFromURL;
+  if (nameFromURL) document.getElementById('studentName').value = nameFromURL;
+
+  // 자동 검색 실행 (필요 없다면 이 부분 주석처리)
+  if (idFromURL && nameFromURL) {
+    form.dispatchEvent(new Event('submit'));
+  }
+});
 
 // 폼 제출 이벤트 처리
 form.addEventListener('submit', function (e) {
